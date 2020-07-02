@@ -1,0 +1,1 @@
+start WolfSP.x64.exe +set sv_cheats 1
