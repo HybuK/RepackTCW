@@ -1,0 +1,254 @@
+// Norway sounds
+// This file is meant mostly for level defind sounds.
+//
+// channels: local, announcer, body, voice, weapon, item, auto (default)
+// toggles: streaming, looping (only works for streaming sounds), global
+
+blank	// troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/general/misc_blank.ogg
+}
+
+g1_worthless // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g1_worthless.ogg
+}
+
+g2_start_generator // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g2_start_generator.ogg
+}
+
+g1_no_upper_body // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g1_no_upper_body.ogg
+}
+
+g2_because_of_cold // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g2_because_of_cold.ogg
+}
+
+g1_shrewd_observation // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g1_shrewd_observation.ogg
+}
+
+g2_crank_harder // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g2_crank_harder.ogg
+}
+
+g1_frozen_solid // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g1_frozen_solid.ogg
+}
+
+g2_relax // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g2_relax.ogg
+}
+
+g1_look_for_antifreeze // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g1_look_for_antifreeze.ogg
+}
+
+g2_alright // troop jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g2_alright.ogg
+}
+
+m1_Ive_had_it // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m1_Ive_had_it.ogg
+}
+
+m2_what_is_it // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m2_what_is_it.ogg
+}
+
+m1_stinking // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m1_stinking.ogg
+}
+
+m2_oh_gott // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m2_oh_gott.ogg
+}
+
+m1_orings // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m1_orings.ogg
+}
+
+m2_ja_ja // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m2_ja_ja.ogg
+}
+
+m1_full_standby // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m1_full_standby.ogg
+}
+
+m2_dh_himself // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m2_dh_himself.ogg
+}
+
+m1_I_didnt_know // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m1_I_didnt_know.ogg
+}
+
+m1_I_dont_believe_it // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m1_I_dont_believe_it.ogg
+}
+
+m2_now_what // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m2_now_what.ogg
+}
+
+m1_torque_wrench // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m1_torque_wrench.ogg
+}
+
+m2_dont_look_at_me // mechanic jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/m2_dont_look_at_me.ogg
+}
+
+g1_how_is_erich // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g1_how_is_erich.ogg
+}
+
+g2_still_sick // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g2_still_sick.ogg
+}
+
+g1_too_bad // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g1_too_bad.ogg
+}
+
+g3_bad_water // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g3_bad_water.ogg
+}
+
+g1_lucky_for_me // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g1_lucky_for_me.ogg
+}
+
+mecdril1 // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/mecdril1.ogg
+}
+
+metal_crank1 // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/metal_crank1.ogg
+}
+
+intruder_alert // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/intruder_alert.ogg
+}
+
+ze_american // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/ze_american.ogg
+}
+
+g1_alarm // guards outside of house jeremy, Norway/Aug/2001 18:04 -Jeremy
+{
+	streaming
+	voice
+	sound sound/scenaric/norway/g1_alarm.ogg
+}
+
+
+
+
+
+
+
+
+
+
+

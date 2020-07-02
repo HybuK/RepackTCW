@@ -1,0 +1,8 @@
+md3_part, "head.md3"
+md3_hat, "acc/o_LeutnantCap"
+tag_head,
+h_head,models/players/officerSS/o_headforest2.tga
+h_mouthin,models/players/officerSS/o_headforest2.tga
+h_teethbot,models/players/officerSS/o_headforest2.tga
+h_teethup,models/players/officerSS/o_headforest2.tga
+h_blink,models/players/officerSS/o_head_blinkVOID.tga

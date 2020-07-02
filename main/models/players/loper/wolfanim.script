@@ -1,0 +1,476 @@
+
+//==========================================================================
+//
+// Character Animation Script
+//
+// This defines the animations and events that might occur at different times
+// for this character. State changes, and random behaviour during idle/alert
+// states will look here for default behaviour, if that character doesn't have
+// something specific in their scripts for that level.
+//
+//==========================================================================
+// DEFINES
+//
+// These can be used to simplify the scripting, by defining replacement strings
+
+DEFINES
+
+// weapons
+set weapons pistols = luger AND SP5 Pistol AND colt AND dual colts AND tt33 AND revolver
+set weapons machineguns = mp40 AND thompson AND sten AND mp44 AND fg42 paratroop rifle AND fg42 scope AND panzerfaust AND venom AND flamethrower AND tesla gun AND ppsh AND mp34 AND mg42m AND bar AND m97
+set weapons rifles = mauser rifle AND sniper scope AND snooper rifle AND g43 AND m1garand AND mosin
+set weapons throwables = dynamite weapon AND pineapple AND grenade
+
+set weapons one_handed_weapons = luger AND SP5 Pistol AND colt AND dual colts AND tt33 AND revolver
+set weapons two_handed_weapons = mp40 AND thompson AND sten AND mauser rifle AND sniper scope AND snooper rifle AND mp44 AND fg42 paratroop rifle AND fg42 scope AND panzerfaust AND venom AND flamethrower AND tesla gun AND ppsh AND g43 AND m1garand AND mp34 AND mg42m AND bar AND mosin AND m97
+
+// movetypes
+set movetype moving = walk AND walkcr AND walkcrbk AND walkbk AND run AND runbk AND straferight AND strafeleft
+
+//==========================================================================
+// ANIMATIONS
+//
+//	NOTE: scripts are chosen by first-come-first-serve basis. The first match
+//	found is the one used.
+//
+// format:
+//
+// state <state description>
+// {
+//		<movement type>
+//		{
+//			[DEFAULT / <condition type> [<condition value>], ...]
+//			{
+//				<both/legs/torso> <animation> [sound <filename>]
+//				<both/legs/torso> <animation> [sound <filename>]
+//				...
+//			}
+//		}
+//	}
+//
+//	legend:
+//
+//	<state description>: relaxed, alert, combat
+//
+//	<movement type>: idle, idlecr, walk, walkbk, walkcr, walkcrbk, run, runbk, straferight, strafeleft, turnright, turnleft
+//
+//	<condition type>: weapons, position, enemy_weapon, underwater, mounted, movetype, underhand, leaning
+//
+//	<condition value>:
+//
+//		weapons: <see weapon pickup names>
+//		position: behind, infront, right, left
+//		enemy_weapon: <see weapon pickup names>
+//		underwater: <no values>
+//		mounted: mg42
+//		movetype: <see movement types>
+//		underhand: <no values>
+//		leaning: right, left
+//
+
+ANIMATIONS
+
+state relaxed
+{
+	climbup
+	{
+		default
+		{
+			both both_climb
+		}
+	}
+	
+	climbdown
+	{
+		default
+		{
+			both both_climb_down
+		}
+	}
+
+	idle
+	{
+		mounted mg42
+		{
+			both torso_mg42
+		}
+		weapons machineguns
+		{
+			legs legs_idle torso torso_stand
+		}
+		weapons rifles
+		{
+			legs legs_idle torso torso_stand2
+		}
+		weapons pistols
+		{
+			legs legs_idle torso torso_stand3
+		}
+		weapons throwables
+		{
+			legs legs_idle torso torso_stand5
+		}
+		default
+		{
+			legs legs_idle torso torso_stand
+		}
+	}
+
+	idlecr
+	{
+		weapons machineguns
+		{
+			legs legs_idlecr torso torso_stand
+		}
+		weapons rifles
+		{
+			legs legs_idlecr torso torso_stand2
+		}
+		weapons pistols
+		{
+			legs legs_idlecr torso torso_stand3
+		}
+		weapons throwables
+		{
+			legs legs_idlecr torso torso_stand5
+		}
+		default
+		{
+			legs legs_idlecr torso torso_stand
+		}
+	}
+
+	walk
+	{
+		weapons machineguns
+		{
+			legs legs_walk torso torso_stand
+		}
+		weapons rifles
+		{
+			legs legs_walk torso torso_stand2
+		}
+		weapons pistols
+		{
+			legs legs_walk torso torso_stand3
+		}
+		weapons throwables
+		{
+			legs legs_walk torso torso_stand5
+		}
+		default
+		{
+			legs legs_walk torso torso_stand
+		}
+	}
+
+	walkcr
+	{
+		weapons machineguns
+		{
+			legs legs_walkcr torso torso_stand
+		}
+		weapons rifles
+		{
+			legs legs_walkcr torso torso_stand2
+		}
+		weapons pistols
+		{
+			legs legs_walkcr torso torso_stand3
+		}
+		weapons throwables
+		{
+			legs legs_walkcr torso torso_stand5
+		}
+		default
+		{
+			legs legs_walkcr torso torso_stand
+		}
+	}
+
+	walkcrbk
+	{
+		weapons machineguns
+		{
+			legs legs_walkcr_back torso torso_stand
+		}
+		weapons rifles
+		{
+			legs legs_walkcr_back torso torso_stand2
+		}
+		weapons pistols
+		{
+			legs legs_walkcr_back torso torso_stand3
+		}
+		weapons throwables
+		{
+			legs legs_walkcr_back torso torso_stand5
+		}
+		default
+		{
+			legs legs_walkcr_back torso torso_stand
+		}
+	}
+
+	walkbk
+	{
+		weapons machineguns
+		{
+			legs legs_back torso torso_stand
+		}
+		weapons rifles
+		{
+			legs legs_back torso torso_stand2
+		}
+		weapons pistols
+		{
+			legs legs_back torso torso_stand3
+		}
+		weapons throwables
+		{
+			legs legs_back torso torso_stand5
+		}
+		default
+		{
+			legs legs_back torso torso_stand
+		}
+	}
+
+	run
+	{
+		weapons machineguns
+		{
+			legs legs_run torso torso_stand
+		}
+		weapons rifles
+		{
+			legs legs_run torso torso_stand2
+		}
+		weapons pistols
+		{
+			legs legs_run torso torso_move
+		}
+		weapons throwables
+		{
+			legs legs_run torso torso_move
+		}
+		default
+		{
+			legs legs_run torso torso_stand
+		}
+	}
+
+	runbk
+	{
+		weapons machineguns
+		{
+			legs legs_back torso torso_stand
+		}
+		weapons rifles
+		{
+			legs legs_back torso torso_stand2
+		}
+		weapons pistols
+		{
+			legs legs_back torso torso_move_alt
+		}
+		weapons throwables
+		{
+			legs legs_back torso torso_move_alt
+		}
+		default
+		{
+			legs legs_back torso torso_stand
+		}
+	}
+
+	turnright
+	{		
+		movetype idle
+		{
+			legs legs_turn
+		}
+	}
+
+	turnleft
+	{		
+		movetype idle
+		{
+			legs legs_turn
+		}
+	}
+}
+
+
+//==========================================================================
+// CANNED_ANIMATIONS
+//
+//	These animations are played at random, momentarily cutting off the
+//	above "normal" animations.
+//
+//	format:
+//
+//	(see ANIMATION section above)
+//
+
+CANNED_ANIMATIONS
+
+//==========================================================================
+// STATECHANGES
+//
+// format:
+//
+// statechange <directionto> <state>
+// {
+//		[DEFAULT / <condition type> [<condition value>], ...]
+//		{
+//			<both/legs/torso> <animation> [sound <filename>]
+//			<both/legs/torso> <animation> [sound <filename>]
+//			...
+//		}
+// }
+//
+// legend:
+//
+// <directionto>: upto, downto
+//
+
+STATECHANGES
+
+//==========================================================================
+// EVENTS
+//
+// format:
+//
+// <event description>
+// {
+//		[DEFAULT / <condition type> [<condition value>], ...]
+//		{
+//			<both/legs/torso> <animation> [sound <filename>]
+//			<both/legs/torso> <animation> [sound <filename>]
+//			...
+//		}
+// }
+//
+// legend:
+//
+// <event description>: death, pain, fireweapon, jump, jumpbk, land, dropweapon,
+//		raiseweapon, climbdismount, reload
+//
+//	NOTE: for gameplay anims (weapons firing, reload, etc) that show no legs movement
+//		only the torso should animation from here, leave the legs doing what their
+//		locomotive anims want them to do
+//
+
+EVENTS
+
+fireweapon
+{
+	weapons machineguns
+	{
+		torso torso_attack
+
+	}
+	weapons rifles
+	{
+		torso torso_attack2
+	}
+	weapons pistols
+	{
+		torso torso_attack3
+	}
+	weapons throwables, underhand
+	{
+		torso torso_attack5b
+	}
+	weapons throwables
+	{
+		torso torso_attack5
+	}
+}
+
+raiseweapon
+{
+	weapons machineguns
+	{
+		torso torso_raise
+	}
+	weapons rifles
+	{
+		torso torso_raise2
+	}
+	weapons pistols
+	{
+		torso torso_raise3
+	}
+	weapons throwables
+	{
+		torso torso_raise5
+	}
+}
+
+reload
+{
+	weapons machineguns
+	{
+		torso torso_reload1
+	}
+	weapons rifles
+	{
+		torso torso_reload2
+	}
+	weapons pistols
+	{
+		torso torso_reload3
+	}
+}
+
+death
+{
+	default
+	{
+		both both_death1 sound loperDeathFall1
+		both both_death2 sound loperDeathFall2
+		both both_death3 sound loperDeathFall3
+	}
+}
+
+// Loper has no pain
+//pain
+//{
+//	default
+//	{
+//	}
+//}
+
+jump 
+{
+	default
+	{
+		legs legs_jump	
+	}		
+}
+
+jumpbk 
+{
+	default
+	{
+		legs legs_jumpb	
+	}		
+}
+
+land
+{
+	default
+	{
+		legs legs_land
+	}
+}
+
+climbdismount
+{
+	default
+	{
+		both both_climb_dismount
+	}
+}

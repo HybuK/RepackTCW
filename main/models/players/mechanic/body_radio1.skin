@@ -1,0 +1,14 @@
+tag_head,
+tag_footleft,
+tag_legleft,
+tag_footright,
+tag_legright,
+tag_lbelt,
+tag_torso,
+tag_bleft,
+tag_bright,
+u_body,models/players/mechanic/mech_radio1.tga
+l_footrt,models/players/mechanic/mech_radio1.tga
+l_footlft,models/players/mechanic/mech_radio1.tga
+u_handrt,models/players/mechanic/mech_radio1.tga
+u_handlft,models/players/mechanic/mech_radio1.tga

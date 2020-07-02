@@ -1,0 +1,8 @@
+l_trenchlegs,models/players/trench/t_legsordnungspolizei1.tga
+u_trenchbody,models/players/trench/t_bodyordnungspolizei1.tga
+u_trenchrthand,models/players/trench/t_legsordnungspolizei1.tga
+u_trenchlfthand,models/players/trench/t_legsordnungspolizei1.tga
+
+//md3_beltl,acc/ammol.md3
+//md3_beltr,acc/ammor.md3
+//md3_back,acc/fieldkitb.md3

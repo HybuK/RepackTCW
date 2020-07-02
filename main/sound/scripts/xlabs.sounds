@@ -1,0 +1,96 @@
+// Xlabs sounds
+// This file is meant mostly for level defind sounds.
+//
+// channels: local, announcer, body, voice, weapon, item, auto (default)
+// toggles: streaming, looping (only works for streaming sounds), global
+
+
+xlab_table_fall
+{
+	sound sound/scenaric/assault/metal_table_fall1.ogg
+}
+
+deathshead_1
+{
+	streaming
+	voice
+	sound sound/scenaric/xlabs/death_better_be_important.ogg
+}
+
+deathshead_2
+{
+	streaming
+	voice
+	sound sound/scenaric/xlabs/death_what.ogg
+}
+
+deathshead_3
+{
+	streaming
+	voice
+	sound sound/scenaric/xlabs/death_dispatch_security.ogg
+}
+
+deathshead_4
+{
+	streaming
+	voice
+	sound sound/scenaric/xlabs/death_i_will_deal.ogg
+}
+
+cine1_nazi1_1
+{
+	streaming
+	voice
+	sound sound/scenaric/xlabs/guard_sir.ogg
+}
+
+cine1_nazi1_2
+{
+	streaming
+	voice
+	sound sound/scenaric/xlabs/guard_yes_sir.ogg
+}
+
+cine1_nazi1_3
+{
+	streaming
+	voice
+	sound sound/scenaric/xlabs/guard_what_are_your_orders.ogg
+}
+
+cine1_nazi1_4
+{
+	streaming
+	voice
+	sound sound/scenaric/xlabs/guard_and_if_the_american.ogg
+}
+
+cine1_nazi1_jawohl
+{
+	streaming
+	voice
+	sound sound/scenaric/xlabs/cine1_jawohl.ogg
+}
+
+xlabs_switch
+{
+	streaming
+	auto
+	sound sound/scenaric/general/misc_switch.ogg
+}
+
+xlabs_sci_fear3
+{
+	streaming
+	voice
+	sound sound/scenaric/rocket/sci_fear_3.ogg
+}
+
+
+xlabs_sci_misc_fear2
+{
+	streaming
+	voice
+	sound sound/scenaric/rocket/sci_fear_2.ogg
+}

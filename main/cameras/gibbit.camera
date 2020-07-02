@@ -1,0 +1,36 @@
+cameraPathDef { 
+	time 10.000000
+	camera_Fixed {
+		time 10000
+		type 0
+		name position
+		baseVelocity 0.000000
+		pos ( 1430.000000 160.000000 -592.000000 )
+	}
+	target_Spline {
+		time 10000
+		type 2
+		name target1
+		baseVelocity 52.033436
+		target {
+			granularity 0.025000
+			( 1024.000000 216.000000 -416.000000 )
+			( 1216.000000 200.000000 -864.000000 )
+			( 1440.000000 144.000000 -864.000000 )
+			( 1504.000000 368.000000 -864.000000 )
+			( 1536.000000 456.000000 -864.000000 )
+			( 1536.000000 592.000000 -864.000000 )
+		}
+	}
+	event {
+		type 4
+		param "target1"
+		time 0
+	}
+	fov {
+		fov 90.000000
+		startFOV 90.000000
+		endFOV 90.000000
+		time 0
+	}
+}

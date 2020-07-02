@@ -1,0 +1,17 @@
+tag_head,
+tag_footleft,
+tag_legleft,
+tag_footright,
+tag_legright,
+tag_lbelt,
+tag_torso,
+tag_bleft,
+tag_bright,
+l_legs,models/players/infantrySS/i_legsburn.tga
+u_body,models/players/infantrySS/i_bodyburn.tga
+u_rthand,models/players/infantrySS/i_bodyburn.tga
+u_lfthand,models/players/infantrySS/i_bodyburn.tga
+
+//md3_belt,acc/ammo.md3
+//md3_beltl,acc/ammoL.md3
+//md3_beltr,acc/ammoR.md3

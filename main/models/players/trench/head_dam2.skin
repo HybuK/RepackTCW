@@ -1,0 +1,9 @@
+md3_part, "head.md3"
+md3_hat, "acc/t_OrdnungspolizeiHelmet"
+//md3_hat, "acc/damcap"
+tag_head,
+h_head,models/players/trench/t_headdam2.tga
+h_mouthin,models/players/trench/t_headdam2.tga
+h_teethbot,models/players/trench/t_headdam2.tga
+h_teethup,models/players/trench/t_headdam2.tga
+h_blink,models/players/infantrySS/i_head_blinkVOID.tga

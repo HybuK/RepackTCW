@@ -1,0 +1,17 @@
+tag_head,
+tag_footleft,
+tag_legleft,
+tag_footright,
+tag_legright,
+tag_lbelt,
+tag_torso,
+tag_bleft,
+tag_bright,
+l_legs,models/players/drz/drz_xlegs1.tga
+u_body,models/players/drz/drz_zemphbody.tga
+u_handrt,models/players/drz/drz_xlegs1.tga
+u_handlft,models/players/drz/drz_xlegs1.tga
+
+//md3_beltl,acc/scibeltL.md3
+//md3_beltr,acc/scibeltR.md3
+//md3_back,acc/scibadge.md3

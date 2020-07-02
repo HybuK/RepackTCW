@@ -1,0 +1,14 @@
+tag_head,
+tag_footleft,
+tag_legleft,
+tag_footright,
+tag_legright,
+tag_lbelt,
+tag_torso,
+tag_bleft,
+tag_bright,
+l_legs,models/players/infantrySS/i_legsStabswache.tga
+u_body,models/players/infantrySS/i_bodyStabswache.tga
+u_rthand,models/players/infantrySS/i_bodyStabswache.tga
+u_lfthand,models/players/infantrySS/i_bodyStabswache.tga
+

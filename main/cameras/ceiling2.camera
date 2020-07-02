@@ -1,0 +1,236 @@
+cameraPathDef { 
+	time 7.000000
+	camera_Interpolated {
+		time 7000
+		type 1
+		name position
+		baseVelocity 5.142857
+		velocity 0 10 0.000000
+		velocity 10 10 0.051429
+		velocity 20 10 0.102857
+		velocity 30 10 0.154286
+		velocity 40 10 0.205714
+		velocity 50 10 0.257143
+		velocity 60 10 0.308571
+		velocity 70 10 0.360000
+		velocity 80 10 0.411429
+		velocity 90 10 0.462857
+		velocity 100 10 0.514286
+		velocity 110 10 0.565714
+		velocity 120 10 0.617143
+		velocity 130 10 0.668571
+		velocity 140 10 0.720000
+		velocity 150 10 0.771428
+		velocity 160 10 0.822857
+		velocity 170 10 0.874286
+		velocity 180 10 0.925714
+		velocity 190 10 0.977143
+		velocity 200 10 1.028571
+		velocity 210 10 1.080000
+		velocity 220 10 1.131428
+		velocity 230 10 1.182857
+		velocity 240 10 1.234285
+		velocity 250 10 1.285714
+		velocity 260 10 1.337143
+		velocity 270 10 1.388571
+		velocity 280 10 1.440000
+		velocity 290 10 1.491428
+		velocity 300 10 1.542857
+		velocity 310 10 1.594285
+		velocity 320 10 1.645714
+		velocity 330 10 1.697142
+		velocity 340 10 1.748571
+		velocity 350 10 1.800000
+		velocity 360 10 1.851428
+		velocity 370 10 1.902857
+		velocity 380 10 1.954285
+		velocity 390 10 2.005714
+		velocity 400 10 2.057142
+		velocity 410 10 2.108571
+		velocity 420 10 2.160000
+		velocity 430 10 2.211428
+		velocity 440 10 2.262857
+		velocity 450 10 2.314285
+		velocity 460 10 2.365714
+		velocity 470 10 2.417142
+		velocity 480 10 2.468571
+		velocity 490 10 2.520000
+		velocity 500 10 2.571428
+		velocity 510 10 2.622857
+		velocity 520 10 2.674285
+		velocity 530 10 2.725714
+		velocity 540 10 2.777142
+		velocity 550 10 2.828571
+		velocity 560 10 2.879999
+		velocity 570 10 2.931428
+		velocity 580 10 2.982857
+		velocity 590 10 3.034285
+		velocity 600 10 3.085714
+		velocity 610 10 3.137142
+		velocity 620 10 3.188571
+		velocity 630 10 3.239999
+		velocity 640 10 3.291428
+		velocity 650 10 3.342856
+		velocity 660 10 3.394285
+		velocity 670 10 3.445714
+		velocity 680 10 3.497142
+		velocity 690 10 3.548571
+		velocity 700 10 3.599999
+		velocity 710 10 3.651428
+		velocity 720 10 3.702856
+		velocity 730 10 3.754285
+		velocity 740 10 3.805713
+		velocity 750 10 3.857142
+		velocity 760 10 3.908571
+		velocity 770 10 3.959999
+		velocity 780 10 4.011428
+		velocity 790 10 4.062857
+		velocity 800 10 4.114285
+		velocity 810 10 4.165714
+		velocity 820 10 4.217143
+		velocity 830 10 4.268572
+		velocity 840 10 4.320001
+		velocity 850 10 4.371429
+		velocity 860 10 4.422858
+		velocity 870 10 4.474287
+		velocity 880 10 4.525716
+		velocity 890 10 4.577145
+		velocity 900 10 4.628573
+		velocity 910 10 4.680002
+		velocity 920 10 4.731431
+		velocity 930 10 4.782860
+		velocity 940 10 4.834289
+		velocity 950 10 4.885717
+		velocity 960 10 4.937146
+		velocity 970 10 4.988575
+		velocity 980 10 5.040004
+		velocity 990 10 5.091433
+		velocity 1000 10 5.142857
+		velocity 6000 10 5.091428
+		velocity 6010 10 5.039999
+		velocity 6020 10 4.988571
+		velocity 6030 10 4.937142
+		velocity 6040 10 4.885713
+		velocity 6050 10 4.834284
+		velocity 6060 10 4.782856
+		velocity 6070 10 4.731427
+		velocity 6080 10 4.679998
+		velocity 6090 10 4.628569
+		velocity 6100 10 4.577140
+		velocity 6110 10 4.525712
+		velocity 6120 10 4.474283
+		velocity 6130 10 4.422854
+		velocity 6140 10 4.371425
+		velocity 6150 10 4.319996
+		velocity 6160 10 4.268568
+		velocity 6170 10 4.217139
+		velocity 6180 10 4.165710
+		velocity 6190 10 4.114281
+		velocity 6200 10 4.062852
+		velocity 6210 10 4.011424
+		velocity 6220 10 3.959995
+		velocity 6230 10 3.908566
+		velocity 6240 10 3.857138
+		velocity 6250 10 3.805709
+		velocity 6260 10 3.754281
+		velocity 6270 10 3.702852
+		velocity 6280 10 3.651424
+		velocity 6290 10 3.599995
+		velocity 6300 10 3.548567
+		velocity 6310 10 3.497138
+		velocity 6320 10 3.445709
+		velocity 6330 10 3.394281
+		velocity 6340 10 3.342852
+		velocity 6350 10 3.291424
+		velocity 6360 10 3.239995
+		velocity 6370 10 3.188567
+		velocity 6380 10 3.137138
+		velocity 6390 10 3.085710
+		velocity 6400 10 3.034281
+		velocity 6410 10 2.982852
+		velocity 6420 10 2.931424
+		velocity 6430 10 2.879995
+		velocity 6440 10 2.828567
+		velocity 6450 10 2.777138
+		velocity 6460 10 2.725710
+		velocity 6470 10 2.674281
+		velocity 6480 10 2.622853
+		velocity 6490 10 2.571424
+		velocity 6500 10 2.519995
+		velocity 6510 10 2.468567
+		velocity 6520 10 2.417138
+		velocity 6530 10 2.365710
+		velocity 6540 10 2.314281
+		velocity 6550 10 2.262853
+		velocity 6560 10 2.211424
+		velocity 6570 10 2.159996
+		velocity 6580 10 2.108567
+		velocity 6590 10 2.057138
+		velocity 6600 10 2.005710
+		velocity 6610 10 1.954281
+		velocity 6620 10 1.902853
+		velocity 6630 10 1.851424
+		velocity 6640 10 1.799996
+		velocity 6650 10 1.748567
+		velocity 6660 10 1.697139
+		velocity 6670 10 1.645710
+		velocity 6680 10 1.594281
+		velocity 6690 10 1.542853
+		velocity 6700 10 1.491424
+		velocity 6710 10 1.439996
+		velocity 6720 10 1.388567
+		velocity 6730 10 1.337139
+		velocity 6740 10 1.285710
+		velocity 6750 10 1.234282
+		velocity 6760 10 1.182853
+		velocity 6770 10 1.131424
+		velocity 6780 10 1.079996
+		velocity 6790 10 1.028567
+		velocity 6800 10 0.977139
+		velocity 6810 10 0.925710
+		velocity 6820 10 0.874282
+		velocity 6830 10 0.822853
+		velocity 6840 10 0.771425
+		velocity 6850 10 0.719996
+		velocity 6860 10 0.668567
+		velocity 6870 10 0.617139
+		velocity 6880 10 0.565710
+		velocity 6890 10 0.514282
+		velocity 6900 10 0.462853
+		velocity 6910 10 0.411425
+		velocity 6920 10 0.359996
+		velocity 6930 10 0.308568
+		velocity 6940 10 0.257139
+		velocity 6950 10 0.205710
+		velocity 6960 10 0.154282
+		velocity 6970 10 0.102853
+		velocity 6980 10 0.051425
+		velocity 6990 10 0.000000
+		startPos ( 559.000000 318.000000 -210.000000 )
+		endPos ( 559.000000 354.000000 -210.000000 )
+	}
+	target_Interpolated {
+		time 7000
+		type 1
+		name baseVelocity
+		baseVelocity 0.000000
+		startPos ( 497.000000 411.000000 -380.000000 )
+		endPos ( 497.000000 411.000000 -380.000000 )
+	}
+	event {
+		type 4
+		param ""
+		time 0
+	}
+	event {
+		type 13
+		param ""
+		time 0
+	}
+	fov {
+		fov 90.000000
+		startFOV 90.000000
+		endFOV 90.000000
+		time 0
+	}
+}

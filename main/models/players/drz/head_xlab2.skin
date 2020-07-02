@@ -1,0 +1,9 @@
+md3_hat, "acc/sciglass1.md3"
+//md3_hat, "acc/scicap1.md3"
+tag_head,
+tag_mouth,
+h_head,models/players/drz/drz_head4.tga
+h_mouthin,models/players/drz/drz_head4.tga
+h_teethbot,models/players/drz/drz_head4.tga
+h_teethup,models/players/drz/drz_head4.tga
+h_blink,models/players/drz/drz_head_blink.tga

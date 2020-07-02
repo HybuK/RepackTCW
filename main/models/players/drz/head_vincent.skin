@@ -1,0 +1,8 @@
+md3_part, "head3.md3"
+tag_head,
+tag_mouth,
+h_head3,models/players/drz/drz_decoyhead.tga
+h_mouthin3,models/players/drz/drz_decoyhead.tga
+h_teethbot3,models/players/drz/drz_decoyhead.tga
+h_teethup3,models/players/drz/drz_decoyhead.tga
+h_blink,models/players/drz/VOID.tga

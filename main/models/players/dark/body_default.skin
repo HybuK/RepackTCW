@@ -1,0 +1,6 @@
+md3_weapon2, "acc/shield.md3"
+md3_weapon, "acc/axe.md3"
+
+u_body,models/players/warrior/wzom_body1.tga
+l_bootlft,models/players/warrior/armor1.tga
+l_bootrt,models/players/warrior/armor1.tga

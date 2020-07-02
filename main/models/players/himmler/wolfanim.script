@@ -1,0 +1,117 @@
+
+//==========================================================================
+//
+// Character Animation Script     H  I  M  M  L  E  R
+//
+//==========================================================================
+
+ANIMATIONS
+
+STATE RELAXED
+{
+	idle
+	{
+		default
+		{
+			both relaxed_idle_no
+		}
+	}
+
+	walk
+	{
+		default
+		{
+			both relaxed_walk_no
+		}
+	}
+
+	turnright
+	{		
+		movetype idle
+		{
+			legs turn_1h_R
+		}
+	}
+
+	turnleft
+	{		
+		movetype idle
+		{
+			legs turn_1h_R
+		}
+	}
+}
+
+
+STATE ALERT
+{
+	idle
+	{
+		default
+		{
+			both relaxed_idle_no
+		}
+	}
+
+	walk
+	{
+		default
+		{
+			both relaxed_walk_no
+		}
+	}
+
+	turnright
+	{		
+		movetype idle
+		{
+			legs turn_1h_R
+		}
+	}
+
+	turnleft
+	{		
+		movetype idle
+		{
+			legs turn_1h_R
+		}
+	}
+}
+
+
+STATE COMBAT
+{
+	idle
+	{
+		default
+		{
+			both relaxed_idle_no
+		}
+	}
+
+	walk
+	{
+		default
+		{
+			both relaxed_walk_no
+		}
+	}
+
+
+	turnright
+	{		
+		movetype idle
+		{
+			legs turn_1h_R
+		}
+	}
+
+	turnleft
+	{		
+		movetype idle
+		{
+			legs turn_1h_R
+		}
+	}
+}
+

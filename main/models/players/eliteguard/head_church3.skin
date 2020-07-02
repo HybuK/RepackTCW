@@ -1,0 +1,8 @@
+md3_part, "head2.md3"
+//md3_hat, "acc/blonde1"
+tag_head,
+h_head2,models/players/eliteguard/eg_head4.tga
+h_mouthin2,models/players/eliteguard/eg_head4.tga
+h_teethbot2,models/players/eliteguard/eg_head4.tga
+h_teethup2,models/players/eliteguard/eg_head4.tga
+h_blink,models/players/eliteguard/eg_head_blink4.tga

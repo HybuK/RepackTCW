@@ -1,0 +1,23 @@
+tag_head,
+tag_footleft,
+tag_legleft,
+tag_footright,
+tag_legright,
+tag_lbelt,
+tag_torso,
+tag_bleft,
+tag_bright,
+l_legs,models/players/venom/v_legssn1.tga
+u_body,models/players/venom/v_bodysn1.tga
+u_handrt,models/players/venom/v_legssn1.tga
+u_handlft,models/players/venom/v_legssn1.tga
+u_ammo,models/players/venom/v_legssn1.tga
+u_gascan,models/players/venom/v_headsn1.tga
+u_head,models/players/venom/v_headsn1.tga
+u_glass,models/players/venom/v_glassn1.tga
+u_headin,models/players/venom/vi_head.tga
+
+md3_back, "acc/bpsn"
+
+
+

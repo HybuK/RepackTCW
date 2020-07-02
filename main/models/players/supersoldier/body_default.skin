@@ -1,0 +1,11 @@
+md3_weapon, "acc/gun.md3"
+
+l_leglft,models/players/supersoldier/sup_legs1.tga
+l_legrt,models/players/supersoldier/sup_legs1.tga
+u_body,models/players/supersoldier/sup_body1.tga
+u_lftarm,models/players/supersoldier/sup_body1.tga
+u_rtarm,models/players/supersoldier/sup_body1.tga
+u_stim1,models/players/supersoldier/sup_stim1.tga
+u_stim2,models/players/supersoldier/sup_stim1.tga
+u_head,models/players/supersoldier/sup_head1.tga
+

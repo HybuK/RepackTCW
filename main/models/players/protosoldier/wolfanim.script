@@ -1,0 +1,397 @@
+
+//==========================================================================
+//
+// Character Animation Script  F O R     P  R  O  T  O  S  O  L  D  I  E  R
+//
+// This defines the animations and events that might occur at different times
+// for this character. State changes, and random behaviour during idle/alert
+// states will look here for default behaviour, if that character doesn't have
+// something specific in their scripts for that level.
+//
+//==========================================================================
+// DEFINES
+//
+// These can be used to simplify the scripting, by defining replacement strings
+
+DEFINES
+
+// weapons
+set weapons pistols = luger AND SP5 Pistol AND colt AND dual colts AND tt33 AND revolver
+set weapons machineguns = mp40 AND thompson AND sten AND mp44 AND fg42 paratroop rifle AND fg42 scope AND panzerfaust AND venom AND flamethrower AND tesla gun AND ppsh AND mp34 AND mg42m AND bar AND m97
+set weapons rifles = mauser rifle AND sniper scope AND snooper rifle AND g43 AND m1garand AND mosin
+set weapons throwables = dynamite weapon AND pineapple AND grenade
+
+set weapons one_handed_weapons = luger AND SP5 Pistol AND colt AND dual colts AND tt33 AND revolver
+set weapons two_handed_weapons = mp40 AND thompson AND sten AND mauser rifle AND sniper scope AND snooper rifle AND mp44 AND fg42 paratroop rifle AND fg42 scope AND panzerfaust AND venom AND flamethrower AND tesla gun AND ppsh AND g43 AND m1garand AND mp34 AND mg42m AND bar AND mosin AND m97
+
+set weapons monster1 = MonsterAttack1
+set weapons monster2 = MonsterAttack2
+set weapons monster3 = MonsterAttack3
+
+// movetypes
+set movetype moving = walk AND walkcr AND walkcrbk AND walkbk AND run AND runbk AND straferight AND strafeleft
+set movetype crouching = idlecr AND walkcr AND walkcrbk
+set movetype backstep = walkbk AND runbk AND walkcrbk
+
+//==========================================================================
+// ANIMATIONS
+//
+//	NOTE: scripts are chosen by first-come-first-serve basis. The first match
+//	found is the one used.
+//
+// format:
+//
+// state <state description>
+// {
+//		<movement type>
+//		{
+//			[DEFAULT / <condition type> [<condition value>], ...]
+//			{
+//				<both/legs/torso> <animation> [sound <filename>]
+//				<both/legs/torso> <animation> [sound <filename>]
+//				...
+//			}
+//		}
+//	}
+//
+//	legend:
+//
+//	<state description>: relaxed, alert, combat
+//
+//	<movement type>: idle, idlecr, walk, walkbk, walkcr, walkcrbk, run, runbk, straferight, strafeleft, turnright, turnleft
+//
+//	<condition type>: weapons, position, enemy_weapon, underwater, mounted, movetype, underhand, leaning
+//
+//	<condition value>:
+//
+//		weapons: <see weapon pickup names>
+//		position: behind, infront, right, left
+//		enemy_weapon: <see weapon pickup names>
+//		underwater: <no values>
+//		mounted: mg42
+//		movetype: <see movement types>
+//		underhand: <no values>
+//		leaning: right, left
+//
+
+ANIMATIONS
+
+STATE RELAXED
+{
+}
+
+STATE ALERT
+{
+	idle
+	{
+		default		
+		{
+			both alert_idle
+		}
+	}
+
+	run
+	{
+		default
+		{
+			both combat_walk_run_1
+		}
+	}
+
+	walk
+	{
+		default
+		{
+			both alert_walk
+		}
+	}
+
+	walkbk
+	{
+		default
+		{
+			both alert_back
+		}
+	}
+
+
+	
+	runbk
+	{
+		default
+		{
+			both alert_back_run
+		}
+	}
+
+
+	straferight
+	{
+
+		default
+		{
+			both strafeR
+		}
+	}
+
+	strafeleft
+	{
+		default
+		{
+			both strafeL
+		}
+	}
+	
+	turnright
+	{		
+		movetype idle
+		{
+			torso turn_R_1
+			torso turn_R_3
+		}
+	}
+
+	turnleft
+	{		
+		movetype idle
+		{
+			torso turn_R_1
+			torso turn_L_3
+		}
+
+	}
+
+}
+
+
+
+STATE COMBAT
+{
+	idle
+	{
+		health_level 3          // less than or equal 25% starting health
+      		{
+           		both combat_idle_3
+    		}
+     	  	health_level 2    //less than or equal 50% starting health
+  		{
+       		both combat_idle_2
+        	}
+   		health_level 1          // more than 50% starting health
+        	{
+       		both combat_idle_1
+        	}
+	}
+
+
+	run
+	{
+    		health_level 3          // less than or equal 25% starting health
+      		{
+           		both combat_walk_run_3
+    		}
+       	health_level 2    //less than or equal 50% starting health
+  		{
+       		both combat_walk_run_2
+        	}
+   		health_level 1          // more than 50% starting health
+        	{
+       		both combat_walk_run_1
+        	}
+	}
+	
+	walk
+	{
+    		health_level 3          // less than or equal 25% starting health
+      		{
+           		both combat_walk_3
+    		}
+       	health_level 2    //less than or equal 50% starting health
+  		{
+       		both combat_walk_2
+        	}
+   		health_level 1          // more than 50% starting health
+        	{
+       		both combat_walk_1
+        	}
+	}
+	
+	walkbk
+	{
+		default
+		{
+			both alert_back
+		}
+	}
+
+
+	runbk
+	{
+    		health_level 3          // less than or equal 25% starting health
+      		{
+           		both alert_back 
+    		}
+       	health_level 2    //less than or equal 50% starting health
+  		{
+       		both alert_back 
+        	}
+   		health_level 1          // more than 50% starting health
+        	{
+       		both alert_back_run
+        	}
+	}
+	
+	straferight
+	{
+
+		default
+		{
+			both strafeR
+		}
+	}
+
+	strafeleft
+	{
+		default
+		{
+			both strafeL
+		}
+	}
+}
+
+
+//==========================================================================
+// CANNED_ANIMATIONS
+//
+//	These animations are played at random, momentarily cutting off the
+//	above "normal" animations.
+//
+//	format:
+//
+//	(see ANIMATION section above)
+//
+
+canned_animations 
+
+//==========================================================================
+// STATECHANGES
+//
+// format:
+//
+// statechange <directionto> <state>
+// {
+//		[DEFAULT / <condition type> [<condition value>], ...]
+//		{
+//			<both/legs/torso> <animation> [sound <filename>]
+//			<both/legs/torso> <animation> [sound <filename>]
+//			...
+//		}
+// }
+
+STATECHANGES
+
+//==========================================================================
+// EVENTS
+//
+// format:
+//
+// <event description>
+// {
+//		[DEFAULT / <condition type> [<condition value>], ...]
+//		{
+//			<both/legs/torso> <animation> [sound <filename>]
+//			<both/legs/torso> <animation> [sound <filename>]
+//			...
+//		}
+// }
+//
+// legend:
+//
+// <event description>: death, pain, fireweapon, jump, jumpbk, land, dropweapon,
+//		raiseweapon, climbdismount, reload
+//
+//	NOTE: for gameplay anims (weapons firing, reload, etc) that show no legs movement
+//		only the torso should animation from here, leave the legs doing what their
+//		locomotive anims want them to do
+//
+
+EVENTS
+
+fireweapon
+{
+   	weapons all, health_level 3, movetype moving
+	{
+		torso combat_walk_run_3
+	}
+    	weapons all, health_level 2, movetype moving
+	{
+		torso combat_walk_run_2
+	}
+   	 weapons all, health_level 1, movetype moving
+	{
+		torso combat_walk_run_1
+	}
+
+
+
+
+	weapons all, health_level 3
+	{
+		torso combat_firing_3
+	}
+    	weapons all, health_level 2
+	{
+		torso combat_firing_2
+	}
+   	 weapons all, health_level 1
+	{
+		torso combat_firing_1
+	}
+
+default
+	{
+		torso combat_firing_1
+	}
+}
+
+//	weapons mine
+//	{
+//		both mine_toss
+//	}
+
+
+
+death
+{
+	default
+	{
+		both death_1 sound superSoldierDeathFall
+	}
+}
+
+pain
+{
+	stunned
+	{
+		torso pain_daze
+	}
+	impact_point chest
+	{
+		torso pain_chest
+	}
+
+	impact_point shoulder_right
+	{
+		torso pain_shoulderR
+	}
+
+	impact_point shoulder_left
+	{
+		torso pain_shoulderL
+	}
+
+	default
+	{
+		torso pain_chest
+	}
+}

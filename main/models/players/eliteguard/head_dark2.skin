@@ -1,0 +1,8 @@
+md3_part, "head3.md3"
+md3_hat, "acc/tog.md3"
+tag_head,
+h_head3,models/players/eliteguard/eg_head6.tga
+h_mouthin3,models/players/eliteguard/eg_head6.tga
+h_teethbot3,models/players/eliteguard/eg_head6.tga
+h_teethup3,models/players/eliteguard/eg_head6.tga
+h_blink,models/players/eliteguard/eg_head_blink5.tga

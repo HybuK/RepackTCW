@@ -1,0 +1,555 @@
+
+//==========================================================================
+//
+// Character Animation Script    H  A  N  S
+//
+// This defines the animations and events that might occur at different times
+// for this character. State changes, and random behaviour during idle/alert
+// states will look here for default behaviour, if that character doesn't have
+// something specific in their scripts for that level.
+//
+//==========================================================================
+// DEFINES
+//
+// These can be used to simplify the scripting, by defining replacement strings
+
+DEFINES
+
+// weapons
+set weapons pistols = luger AND SP5 Pistol AND colt AND dual colts AND tt33 AND revolver
+set weapons machineguns = mp40 AND thompson AND sten AND mp44 AND fg42 paratroop rifle AND fg42 scope AND panzerfaust AND venom AND flamethrower AND tesla gun AND ppsh AND mp34 AND mg42m AND bar AND m97
+set weapons rifles = mauser rifle AND sniper scope AND snooper rifle AND g43 AND m1garand AND mosin
+set weapons throwables = dynamite weapon AND pineapple AND grenade
+
+set weapons one_handed_weapons = luger AND SP5 Pistol AND colt AND dual colts AND tt33 AND revolver
+set weapons two_handed_weapons = mp40 AND thompson AND sten AND mauser rifle AND sniper scope AND snooper rifle AND mp44 AND fg42 paratroop rifle AND fg42 scope AND panzerfaust AND venom AND flamethrower AND tesla gun AND ppsh AND g43 AND m1garand AND mp34 AND mg42m AND bar AND mosin AND m97
+
+// movetypes
+set movetype moving = walk AND walkcr AND walkcrbk AND walkbk AND run AND runbk AND straferight AND strafeleft
+set movetype crouching = idlecr AND walkcr AND walkcrbk
+set movetype backstep = walkbk AND runbk AND walkcrbk
+
+//==========================================================================
+// ANIMATIONS
+//
+//	NOTE: scripts are chosen by first-come-first-serve basis. The first match
+//	found is the one used.
+//
+// format:
+//
+// state <state description>
+// {
+//		<movement type>
+//		{
+//			[DEFAULT / <condition type> [<condition value>], ...]
+//			{
+//				<both/legs/torso> <animation> [sound <filename>]
+//				<both/legs/torso> <animation> [sound <filename>]
+//				...
+//			}
+//		}
+//	}
+//
+//	legend:
+//
+//	<state description>: relaxed, alert, combat
+//
+//	<movement type>: idle, idlecr, walk, walkbk, walkcr, walkcrbk, run, runbk, straferight, strafeleft, turnright, turnleft
+//
+//	<condition type>: weapons, position, enemy_weapon, underwater, mounted, movetype, underhand, leaning
+//
+//	<condition value>:
+//
+//		weapons: <see weapon pickup names>
+//		position: behind, infront, right, left
+//		enemy_weapon: <see weapon pickup names>
+//		underwater: <no values>
+//		mounted: mg42
+//		movetype: <see movement types>
+//		underhand: <no values>
+//		leaning: right, left
+//
+
+ANIMATIONS
+
+STATE RELAXED
+{
+	idle
+	{
+		weapons none
+		{
+			both relaxed_idle_no
+		}
+		weapons one_handed_weapons
+		{
+			both relaxed_idle_no
+		}
+		default
+		{
+			both relaxed_idle_no
+		}
+	}
+
+	walk
+	{
+		weapons none
+		{
+			both relaxed_walk_no
+		}
+		weapons one_handed_weapons
+		{
+			both relaxed_walk_1h_1
+		}
+		default
+		{
+			both relaxed_walk_1h_1
+		}
+	}
+
+	walkcr
+	{
+		weapons one_handed_weapons
+		{
+			both alert_crch_1h
+		}
+		default
+		{
+			both alert_crch_1h
+		}
+	}
+
+	walkcrbk
+	{
+		weapons one_handed_weapons
+		{
+			both alert_crbk_1h
+		}
+		default
+		{
+			both alert_crbk_1h
+		}
+	}
+
+	walkbk
+	{
+		weapons one_handed_weapons
+		{
+			both alert_bk_1h
+		}
+		default
+		{
+			both alert_bk_1h
+		}
+	}
+
+	run
+	{
+		weapons none
+		{
+			both alert_run_no
+		}
+		weapons one_handed_weapons
+		{
+			both alert_run_1h
+		}
+		default
+		{
+			both alert_run_1h
+		}
+	}
+
+	runbk
+	{
+		weapons one_handed_weapons
+		{
+			both alert_bk_1h
+		}
+		default
+		{
+			both alert_bk_1h
+		}
+	}
+
+	turnright
+	{		
+		movetype idlecr
+		{
+			legs turn_crch_R
+		}
+		movetype idle
+		{
+			legs turn_1h_R
+		}
+	}
+
+	turnleft
+	{		
+		movetype idlecr
+		{
+			legs turn_crch_L
+		}
+		movetype idle
+		{
+			legs turn_1h_L
+		}
+	}
+}
+
+
+STATE ALERT
+{
+	idle
+	{
+		weapons one_handed_weapons
+		{
+			both alert_idle_1h
+		}
+		default
+		{
+			both alert_idle_1h
+		}
+	}
+
+	idlecr
+	{
+		weapons one_handed_weapons
+		{
+			legs alert_crchidle_1h torso stand_pistolB
+		}
+		default
+		{
+			both alert_crchidle_1h
+		}
+	}
+
+	walk
+	{
+		weapons one_handed_weapons
+		{
+			both alert_walk_1h
+		}
+		default
+		{
+			both alert_walk_1h
+		}
+	}
+
+	walkcr
+	{
+		weapons one_handed_weapons
+		{
+			both alert_crch_1h
+		}
+		default
+		{
+			both alert_crch_1h
+		}
+	}
+
+	walkcrbk
+	{
+		weapons one_handed_weapons
+		{
+			both alert_crbk_1h
+		}
+		default
+		{
+			both alert_crbk_1h
+		}
+	}
+
+	walkbk
+	{
+		weapons one_handed_weapons
+		{
+			both alert_bk_1h
+		}
+		default
+		{
+			both alert_bk_1h
+		}
+	}
+
+	run
+	{
+		weapons none
+		{
+			both alert_run_no
+		}
+		weapons one_handed_weapons
+		{
+			both alert_run_1h
+		}
+		default
+		{
+			both alert_run_1h
+		}
+	}
+
+	runbk
+	{
+		weapons one_handed_weapons
+		{
+			both alert_bk_1h
+		}
+		default
+		{
+			both alert_bk_1h
+		}
+	}
+
+}
+
+STATE COMBAT
+{
+	idle
+	{
+		weapons pistols, firing
+		{
+//			legs firing_pistolA_1 torso stand_pistolA
+//			legs firing_pistolA_2 torso stand_pistolA
+			legs firing_pistolB_1 torso stand_pistolB
+			legs firing_pistolB_2 torso stand_pistolB
+		}
+		weapons pistols
+		{
+//			both stand_pistolA
+			both stand_pistolB
+		}
+	}
+
+	// RF, the current alert walks look wierd when in combat mode, so I think we should use the run for now
+	walk
+	{
+		weapons none
+		{
+			both alert_run_no
+		}
+		weapons one_handed_weapons
+		{
+			both alert_run_1h
+		}
+		default
+		{
+			both alert_run_1h
+		}
+	}
+
+	walkbk
+	{
+		weapons one_handed_weapons
+		{
+			both alert_bk_1h
+		}
+		default
+		{
+			both alert_bk_1h
+		}
+	}
+}
+
+//==========================================================================
+// CANNED_ANIMATIONS
+//
+//	These animations are played at random, momentarily cutting off the
+//	above "normal" animations.
+//
+//	format:
+//
+//	(see ANIMATION section above)
+//
+
+canned_animations 
+
+//==========================================================================
+// STATECHANGES
+//
+// format:
+//
+// statechange <directionto> <state>
+// {
+//		[DEFAULT / <condition type> [<condition value>], ...]
+//		{
+//			<both/legs/torso> <animation> [sound <filename>]
+//			<both/legs/torso> <animation> [sound <filename>]
+//			...
+//		}
+// }
+
+STATECHANGES
+
+statechange relaxed query
+{
+	weapons one_handed_weapons
+	{
+		both query_idle_1h
+	}
+	default
+	{
+		both query_idle_1h
+	}
+}
+
+//==========================================================================
+// EVENTS
+//
+// format:
+//
+// <event description>
+// {
+//		[DEFAULT / <condition type> [<condition value>], ...]
+//		{
+//			<both/legs/torso> <animation> [sound <filename>]
+//			<both/legs/torso> <animation> [sound <filename>]
+//			...
+//		}
+// }
+//
+// legend:
+//
+// <event description>: death, pain, fireweapon, jump, jumpbk, land, dropweapon,
+//		raiseweapon, climbdismount, reload
+//
+//	NOTE: for gameplay anims (weapons firing, reload, etc) that show no legs movement
+//		only the torso should animation from here, leave the legs doing what their
+//		locomotive anims want them to do
+//
+
+EVENTS
+
+fireweapon
+{
+// PISTOLS
+	weapons pistols, movetype walk AND turnleft AND turnright AND idlecr AND idle
+	{
+//		torso firing_pistolA_1
+//		torso firing_pistolA_2
+		torso firing_pistolB_1
+		torso firing_pistolB_2
+	}
+	weapons pistols, movetype walkcrbk
+	{
+		torso firing_crbk_1h
+	}
+	weapons pistols, movetype crouching
+	{
+		torso firing_crch_1h
+	}
+	weapons pistols, movetype run
+	{
+		torso firing_run_1h
+	}
+	weapons pistols, movetype backstep
+	{
+		torso firing_bk_1h
+	}
+	weapons pistols
+	{
+//		torso firing_pistolA_1
+//		torso firing_pistolA_2
+		torso firing_pistolB_1
+		torso firing_pistolB_2
+	}
+
+}
+	
+raiseweapon
+{
+	weapons pistols
+	{
+		torso raise_pistolA
+//		torso raise_pistolB
+	}
+}
+
+reload
+{
+	weapons pistols, movetype idlecr
+	{
+		torso reload_pistol_cr
+	}
+	weapons pistols
+	{
+		torso reload_pistol
+	}
+}
+
+jump
+{
+	weapons one_handed_weapons, movetype run
+	{
+		both jump_1step_1h
+	}
+	weapons one_handed_weapons
+	{
+		both jump_nostep_1h
+	}
+	default
+	{
+		both jump_1step_1h 
+	}
+}
+
+jumpbk
+{
+	weapons one_handed_weapons, movetype run
+	{
+		both jump_1step_1h
+	}
+	weapons one_handed_weapons
+	{
+		both jump_nostep_1h
+	}
+	default
+	{
+		both jump_1step_1h 
+	}
+}
+
+inform_friendly_of_enemy
+{
+	enemy_team allies
+	{
+		sound infantryInformFriendlyOfEnemyAllies1
+		sound infantryInformFriendlyOfEnemyAllies2
+		sound infantryInformFriendlyOfEnemyGeneral1
+		sound infantryInformFriendlyOfEnemyGeneral2
+		sound infantryInformFriendlyOfEnemyGeneral3
+	}
+
+	default
+	{
+		sound infantryInformFriendlyOfEnemyGeneral1
+		sound infantryInformFriendlyOfEnemyGeneral2
+		sound infantryInformFriendlyOfEnemyGeneral3
+	}
+}
+
+DEATH
+{
+	default
+	{
+//		both death_rifle_head_1 sound infantryDeathriflehead1
+		both death_rifle_torso_1 sound infantryDeathrifletorso1
+		
+	}
+}
+
+
+pain
+{
+	enemy_weapon flamethrower
+	{
+		both pain_fire
+	}
+
+	stunned
+	{
+		both pain_daze
+	}
+
+	default
+	{
+		both pain_gut
+	}
+}

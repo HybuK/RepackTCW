@@ -1,0 +1,155 @@
+// Boss1 sounds
+// This file is meant mostly for level defind sounds.
+//
+// channels: local, announcer, body, voice, weapon, item, auto (default)
+// toggles: streaming, looping (only works for streaming sounds), global
+
+helga_1
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/hel_01.ogg
+}
+
+helga_2
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/hel_02.ogg
+}
+
+helga_3
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/hel_03.ogg
+}
+
+helga_4
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/hel_04.ogg
+}
+
+helga_5
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/hel_05.ogg
+}
+
+helga_6
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/hel_06.ogg
+}
+
+zemph_1
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/zem_01.ogg
+}
+
+zemph_2
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/zem_02.ogg
+}
+
+zemph_3
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/zem_03.ogg
+}
+
+zemph_4
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/zem_04.ogg
+}
+
+zemph_5
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/zem_05.ogg
+}
+
+zemph_6
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/zem_06.ogg
+}
+
+zemph_7
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/zem_07.ogg
+}
+
+boss1_mh_01
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/mh_01.ogg
+}
+
+boss1_en_01
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/en_01.ogg
+}
+
+boss1_mh_02
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/mh_02.ogg
+}
+
+boss1_en_02
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/en_02.ogg
+}
+
+boss1_mh_03
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/mh_03.ogg
+}
+
+boss1_mh_static
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/mh_static.ogg
+}
+
+boss1_en_static
+{
+	streaming
+	voice
+	sound sound/scenaric/boss1/en_static.ogg
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+md3_part, "head.md3"
+md3_hat, "acc/capReichsfuhrer"
+
+h_headH,models/players/himmler/h_headHimmler.tga
+h_teethbotH,models/players/himmler/h_headHimmler.tga
+h_teethupH,models/players/himmler/h_headHimmler.tga
+h_blink,models/players/himmler/him_head_blink.tga
+h_glassesH,models/players/himmler/him_glasses.tga

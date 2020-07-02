@@ -1,0 +1,138 @@
+// forest sounds
+// This file is meant for level specific sounds.
+//
+// channels: local, announcer, body, voice, weapon, item, auto (default)
+// toggles: streaming, looping (only works for streaming sounds), global
+
+Me109Flight
+{
+	streaming
+	auto
+	sound sound/scenaric/forest/me109_flight.ogg
+}
+
+ForestNazi7_1
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis7_delivery.ogg
+}
+
+ForestNazi8_1
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis8_believeso.ogg
+}
+
+ForestNazi9_1
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis9_american.ogg
+}
+
+ForestNazi10_1
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis10_misdrop.ogg
+}
+
+ForestNazi10_2
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis10_findout.ogg
+}
+
+ForestNazi10_3
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis10_schedule.ogg
+}
+
+ForestNazi10_4
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis10_sentries.ogg
+}
+
+ForestNazi11_1
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis11_parachute.ogg
+}
+
+ForestNazi11_2
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis11_training.ogg
+}
+
+ForestNazi11_3
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis11_investigate.ogg
+}
+
+ForestNazi11_4
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis11_yaya.ogg
+}
+
+ForestNazi13_1
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis13_wellsir.ogg
+}
+
+ForestNazi15_1
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis15_special.ogg
+}
+
+ForestNazi15_2
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis15_deathshead.ogg
+}
+
+ForestNazi15_3
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis15_handle.ogg
+}
+
+ForestNazi15_4
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis15_better.ogg
+}
+
+ForestNazi15_5
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis15_meingott.ogg
+}
+
+ForestNazi15_6
+{
+	streaming
+	voice
+	sound sound/scenaric/forest/axis15_weapons.ogg
+}

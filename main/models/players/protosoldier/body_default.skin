@@ -1,0 +1,12 @@
+md3_weapon, "acc/gun.md3"
+
+l_leglft,models/players/protosoldier/proto_legs1.tga
+l_legrt,models/players/protosoldier/proto_legs1.tga
+u_body,models/players/protosoldier/proto_body1.tga
+u_lftarm,models/players/protosoldier/proto_body1.tga
+u_rtarm,models/players/protosoldier/proto_body1.tga
+u_stim1,models/players/protosoldier/proto_stim1.tga
+u_stim2,models/players/protosoldier/proto_stim1.tga
+u_head,models/players/protosoldier/proto_head1.tga
+
+

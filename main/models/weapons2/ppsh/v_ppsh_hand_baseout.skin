@@ -1,0 +1,8 @@
+reciever,models/weapons2/ppsh/ppsh_reciever.tga
+stock,models/weapons2/ppsh/ppsh_stock.tga
+barrel,models/weapons2/ppsh/ppsh_misc.tga
+hand,models/weapons2/arms/forest/hand16.tga
+bolt,models/weapons2/ppsh/ppsh_reciever.tga
+clip,models/weapons2/ppsh/ppsh_stock.tga
+b3_lhand,models/weapons2/arms/forest/hand16.tga
+b3_sleeve,models/weapons2/arms/forest/arm2.tga

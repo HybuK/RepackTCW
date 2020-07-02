@@ -1,0 +1,11 @@
+md3_part, "head.md3"
+//md3_hat, "acc/i_SSblackhelmet"
+// edit dan
+//md3_hat, "acc/i_SSsturmcap"
+//md3_hat, "acc/feldmutz.md3"
+tag_head,
+h_head,models/mapobjects/bodyparts/i_head.tga
+h_mouthin,models/mapobjects/bodyparts/i_head.tga
+h_teethbot,models/mapobjects/bodyparts/i_head.tga
+h_teethup,models/mapobjects/bodyparts/i_head.tga
+h_blink,models/players/infantrySS/i_head_blinkVOID.tga

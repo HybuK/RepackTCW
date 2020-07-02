@@ -1,0 +1,1258 @@
+#include "ui/menudef.h"
+
+{
+\\ SETUP MENU \\
+
+menuDef {
+    	name "ingame_controls"
+    	visible 0
+    	fullscreen 0
+			outOfBoundsClick			// this closes the window if it gets a click out of the rectangle
+	rect 100 125 443 340
+    	focusColor 1 .75 0 1
+    	style 1
+    	border 1
+	onClose {
+	    uiScript saveControls
+	}
+	onopen { hide grpControls ; show look ; uiScript loadControls }
+
+
+
+
+itemDef {
+	name window
+	group ingamebox	
+	rect 0 2 443 315
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor .5 .5 .5 .5
+	forecolor 1 1 1 1
+	backcolor 0 0 0 .25
+	visible 1
+	decoration
+}
+
+
+itemDef {
+      name keyBindStatus
+      rect 0 400 320 15 
+	ownerdraw UI_KEYBINDSTATUS
+	text " "      
+	forecolor 1 .75 0 1
+	textscale .230
+	textalignx 187
+	textalign 1
+	textaligny 10
+	visible 0
+      decoration 
+	}
+
+
+	itemDef 
+	{
+		name window
+		group ingamebox2
+		rect 2 4 439 20	
+		style WINDOW_STYLE_FILLED
+		border 1
+		bordercolor .1 .1 .1 .2
+		forecolor 1 1 1 1
+		backcolor .3 0.5 0.2 .25
+		visible 1
+		decoration
+	}
+
+
+
+itemDef {
+	name ctr_look
+	text "Обзор"
+	type 1
+	textscale .23
+	group grpControlbutton
+	rect 30 3.5 45 20
+	textalign 1
+	textalignx 22
+	textaligny 14
+	border 1
+	bordercolor .1 .1 .1 0
+	forecolor 1 1 1 1
+	visible 1
+	action { hide grpControls ; show look }
+	mouseEnter { setitemcolor ctr_look backcolor .1 .37 .1 1 }
+      	mouseExit { setitemcolor ctr_look backcolor .37 .1 .1 1 }
+	}
+
+	itemDef {
+      		name look
+		group grpControls
+      		type ITEM_TYPE_BIND
+		text "Взглд вверх:"
+		cvar "+lookup"
+		rect 82 30 290 12 
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10    
+		textscale .23 
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+     		forecolor 1 1 1 1
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+      		name look
+		group grpControls
+      		type ITEM_TYPE_BIND
+		text "Взглд вниз:"
+		cvar "+lookdown"
+		rect 82 45 290 12 
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10       
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+      		name look
+		group grpControls
+      		type ITEM_TYPE_BIND
+		text "Обзор мышью:"
+		cvar "+mlook"
+		rect 82 60 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0  
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+	
+itemDef {
+	name look
+	group grpControls
+	type ITEM_TYPE_BIND
+	text "Центрирование вида:"
+	cvar "centerview"
+		rect 82 75 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus }
+	}
+
+itemDef {
+	name look
+	group grpControls
+	type ITEM_TYPE_BIND
+	text "Бинокль:"
+	cvar "+zoom"
+		rect 82 90 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus } 
+	}
+
+//zoom in
+
+itemDef {
+	name look
+	group grpControls
+	type ITEM_TYPE_BIND
+	text "Увеличение:"
+	cvar "zoomin"
+		rect 82 105 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus } 
+	}
+
+//zoom out
+
+itemDef {
+	name look
+	group grpControls
+	type ITEM_TYPE_BIND
+		text "Уменьшение:"
+		cvar "zoomout"
+		rect 82 120 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus } 
+	}
+
+
+
+itemDef {
+	name look
+	group grpControls
+	type ITEM_TYPE_YESNO
+	text "Свободный обзор:"
+	cvar "cl_freelook"
+		rect 82 135 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+	mouseenter { show yesno_message }
+	mouseexit { hide yesno_message }
+	}
+
+
+// cg_useWeapsForZoom option lets weapon scroll keys
+// operate zoom in/out when in a zoomed mode (binoc/scope)
+
+
+
+ itemDef {
+	name look
+	group grpControls
+	type ITEM_TYPE_TEXT
+	text "Использовать смену оружи"
+	rect 90 160 290 12
+	textalign ITEM_ALIGN_RIGHT
+	textalignx 180
+	textaligny 10
+	textscale .23           
+	forecolor 1 1 1 1
+	visible 0 
+	}
+
+ itemDef {
+	name look
+	group grpControls
+	type ITEM_TYPE_MULTI
+	text "дл увеличени:"
+	cvar "cg_useWeapsForZoom"
+	cvarFloatList { "Откл" 0 "Вкл (норма)" 1 "Вкл (обратн.)" 2 }
+	rect 82 175 290 12
+	textalign ITEM_ALIGN_RIGHT
+	textalignx 142
+	textaligny 10
+	textscale .23           
+	forecolor 1 1 1 1
+	style WINDOW_STYLE_FILLED
+	backcolor 1 1 1 .07
+	visible 0 
+	}
+
+
+itemDef {
+	name ctr_move
+	text "Движение"
+	type 1
+	textscale .23
+	group grpControlbutton
+	rect 146 3.5 45 20
+	textalign 1
+	textalignx 22
+	textaligny 14
+	border 1
+	bordercolor .1 .1 .1 0
+	forecolor 1 1 1 1 
+	backcolor .1 .1 .1 0
+	visible 1
+	action { hide grpControls ; show move }
+	mouseEnter { setitemcolor ctr_move backcolor .1 .37 .1 1 }
+      mouseExit { setitemcolor ctr_move backcolor .37 .1 .1 1 }
+	}
+
+
+ 	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_YESNO
+		text "Всегда бежать:"
+		cvar "cl_run"
+		rect 82 30 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23            
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show yesno_message }
+		mouseexit { hide yesno_message }
+    		}
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Бег / Ходьба:"
+		cvar "+speed"
+		rect 82 45 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23            
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+    		}
+
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Спринт:"
+		cvar "+sprint"
+		rect 82 60 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23            
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+    		}
+
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Вперед:"
+		cvar "+forward"
+		rect 82 75 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23            
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Назад:"
+		cvar "+back"
+		rect 82 90 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23                   
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+	
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Шаг влево:"
+		cvar "+moveleft"
+		rect 82 105 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23            
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Шаг вправо:"
+		cvar "+moveright"
+		rect 82 120 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+itemDef {
+	name move
+	group grpControls
+	type ITEM_TYPE_BIND
+	text "Наклон влево:"
+	cvar "+leanleft"
+		rect 82 135 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus } 
+	}
+
+itemDef {
+	name move
+	group grpControls
+	type ITEM_TYPE_BIND
+	text "Наклон вправо:"
+	cvar "+leanright"
+		rect 82 150 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus } 
+	}
+
+
+
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Прыжок:"
+		cvar "+moveup"
+		rect 82 165 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Пригнутьс:"
+		cvar "+movedown"
+		rect 82 180 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus } 
+    		}
+
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Поворот влево:"
+		cvar "+left"
+		rect 82 195 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23            
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Поворот вправо:"
+		cvar "+right"
+		rect 82 210 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23            
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+	
+	itemDef {
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Смещение:"
+		cvar "+strafe"
+		rect 82 225 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23            
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+
+itemDef {
+	name ctr_shoot
+	text "Стрельба"
+	type 1
+	textscale .23
+	group grpControlbutton
+//	rect 200 3.5 45 20
+rect 260 3.5 47 20
+	textalign 1
+	textalignx 22
+	textaligny 14
+	border 1
+	bordercolor .1 .1 .1 0
+	forecolor 1 1 1 1
+	backcolor .1 .1 .1 0 
+	visible 1
+	action { hide grpControls ; show shoot }
+	mouseEnter { setitemcolor ctr_shoot backcolor .1 .37 .1 1 }
+      mouseExit { setitemcolor ctr_shoot backcolor .37 .1 .1 1 }
+	}
+	itemDef {
+		name shoot				
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Атака:"
+		cvar "+attack"
+		rect 82 30 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Перезардка оружи:"
+		cvar "+reload"
+		rect 82 45 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Следующее оружие:"
+		cvar "weapnext"
+		rect 82 60 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Предыдущее оружие:"
+		cvar "weapprev"
+		rect 82 75 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "След. оружие в чейке:"
+		cvar "weapnextinbank"
+		rect 82 90 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Пред. оружие в чейке:"
+		cvar "weapprevinbank"
+		rect 82 105 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+//	itemDef {
+//		name shoot
+//		group grpControls
+//		type ITEM_TYPE_YESNO
+//		text "Cycle All Weaps:"
+//		cvar "cg_cycleAllWeaps"
+//		rect 82 120 290 12
+//		textalign ITEM_ALIGN_RIGHT
+//		textalignx 142 
+//		textaligny 10
+//		textscale .23        
+//		forecolor 1 1 1 1
+//		style WINDOW_STYLE_FILLED
+//		backcolor 1 1 1 .07
+//		visible 0
+//		mouseenter { show yesno_message }
+//		mouseexit { hide yesno_message }
+  //  		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Альтернативный огонь:"
+		cvar "weapalt"
+		rect 82 120 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+	
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_MULTI
+		text "Автосмена:"
+		cvar "cg_autoswitch"
+		cvarFloatList { "Откл" 0 "Всегда" 1 "Если новое" 2 "Если лучше" 3 "Новое или лучше" 4 "Новое и лучше" 5 }
+		rect 82 135 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Нож:"
+		cvar "weaponbank 1"
+		rect 82 150 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Пистолеты:"
+		cvar "weaponbank 2"
+		rect 82 165 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Пистолет-пулеметы:"
+		cvar "weaponbank 3"
+		rect 82 180 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Винтовки:"
+		cvar "weaponbank 4"
+		rect 82 195 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Автоматы:"
+		cvar "weaponbank 5"
+			rect 82 210 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+	
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Гранаты:"
+		cvar "weaponbank 6"
+		rect 82 225 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Ракеты:"
+		cvar "weaponbank 7"
+		rect 82 240 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Злоба:"
+		cvar "weaponbank 8"
+		rect 82 255 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Огнемет:"
+		cvar "weaponbank 9"
+		rect 82 270 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Тесла:"
+		cvar "weaponbank 10"
+		rect 82 285 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23        
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+
+
+itemDef {
+	name ctr_miscellaneous
+	text "Разное"
+	type 1
+	textscale .23
+	group grpControlbutton
+	rect 372 3.5 45 20
+//	rect 280 3.5 45 20
+	textalign 1
+	textalignx 22
+	textaligny 14
+	border 1
+	bordercolor .1 .1 .1 0
+	forecolor 1 1 1 1
+	backcolor .1 .1 .1 0 
+	visible 1
+	action { hide grpControls ; show misc }
+	mouseEnter { setitemcolor ctr_miscellaneous backcolor .1 .37 .1 1 }
+      	mouseExit { setitemcolor ctr_miscellaneous backcolor .37 .1 .1 1 }
+	}
+
+	itemDef {
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Цианид(убить игрока):"
+		cvar "kill"
+		rect 62 30 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .23  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+	itemDef {
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Удар ногой:"
+		cvar "+kick"
+		rect 62 45 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .23  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+    		}
+
+
+	itemDef {
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Записна книжка:"
+		cvar "notebook"
+		rect 62 60 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .23  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+  	}
+
+
+
+	itemDef {
+		name misc
+		group grpControls
+		type ITEM_TYPE_YESNO
+		text "Автоподбор предметов:"
+		cvar "cg_autoactivate"
+		rect 62 75 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .23  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+		mouseenter { show yesno_message }
+		mouseexit { hide yesno_message }
+   		}
+
+	itemDef {
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Активировать:"
+		cvar "+activate"
+		rect 62 90 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .23  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+   		}
+
+itemDef {
+	name misc
+	group grpControls
+	type ITEM_TYPE_BIND
+	text "Использовать предмет:"
+	cvar "+useitem"
+	rect 62 105 310 12
+	textalign ITEM_ALIGN_RIGHT
+	textalignx 162 
+	textaligny 10
+	textscale .23  
+	style WINDOW_STYLE_FILLED
+	backcolor 1 1 1 .07                  
+	forecolor 1 1 1 1
+	visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus }
+}
+
+itemDef {
+	name misc
+	group grpControls
+	type ITEM_TYPE_BIND
+	text "Следующий предмет:"
+	cvar "itemnext"
+	rect 62 120 310 12
+	textalign ITEM_ALIGN_RIGHT
+	textalignx 162 
+	textaligny 10
+	textscale .23  
+	style WINDOW_STYLE_FILLED
+	backcolor 1 1 1 .07                  
+	forecolor 1 1 1 1
+	visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus }
+}
+
+itemDef {
+	name misc	
+	group grpControls
+	type ITEM_TYPE_BIND
+	text "Предыдущий предмет:"
+	cvar "itemprev"
+	rect 62 135 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .23  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus }
+}
+	
+
+itemDef {
+	name misc
+	group grpControls
+	type ITEM_TYPE_YESNO
+	text "Инверси мыши:"
+	cvar "ui_mousePitch"
+	rect 62 150 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .23  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+	action { uiScript update ui_mousePitch }
+	mouseenter { show yesno_message }
+	mouseexit { hide yesno_message }
+}
+
+itemDef {
+	name misc
+	group grpControls
+	type ITEM_TYPE_YESNO
+	text "Плавна мышь:"
+	cvar "m_filter"
+	rect 62 165 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .23  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+	mouseenter { show yesno_message }
+	mouseexit { hide yesno_message }
+	}
+
+
+	itemDef {
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Быстрое сохранение:"
+		cvar "savegame quicksave"
+		rect 62 180 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .22  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+  	}
+
+	itemDef {
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Быстра загрузка:"
+		cvar "loadgame quicksave"
+		rect 62 195 310 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 162 
+		textaligny 10
+		textscale .22  
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                  
+		forecolor 1 1 1 1
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+  	}
+
+itemDef {
+	name misc
+	group grpControls
+	type ITEM_TYPE_SLIDER
+	text "Чувствительность мыши:"
+	cvarfloat "sensitivity" 5 1 30
+	rect 62 210 310 12
+	textalign ITEM_ALIGN_RIGHT
+	textalignx 162 
+	textaligny 10
+	textscale .23  
+	style WINDOW_STYLE_FILLED
+	backcolor 1 1 1 .07                  
+	forecolor 1 1 1 1
+	visible 0 
+	mouseenter { show slider_message }
+	mouseexit { hide slider_message }
+}
+
+
+
+itemDef {
+      name yesno_message
+      rect 0 310 300 15 
+	text "Выберите команду дл переключени да/нет"      
+	forecolor 1 .75 0 1
+	textscale .230
+	textalignx 221
+	textalign 1
+	textaligny 20
+	visible 0
+      	decoration 
+	}
+
+itemDef {
+      name slider_message
+      rect 0 310 300 15 
+	text "Перемещайте ползунок дл увеличени или уменьшени"     
+	forecolor 1 .75 0 1
+	textscale .230
+	textalignx 221
+	textalign 1
+	textaligny 20
+	visible 0
+      	decoration 
+	}
+
+
+
+
+
+}
+
+
+}

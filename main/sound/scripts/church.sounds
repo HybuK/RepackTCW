@@ -1,0 +1,232 @@
+// church sounds
+// This file is meant mostly for level defind sounds.
+//
+// channels: local, announcer, body, voice, weapon, item, auto (default)
+// toggles: streaming, looping (only works for streaming sounds), global
+
+churchn1_1
+{
+	streaming
+	voice
+	sound sound/scenaric/church/axis1_poor_josef.ogg
+}
+
+churchn1_2
+{
+	streaming
+	voice
+	sound sound/scenaric/church/axis1_dead.ogg
+}
+
+churchn1_3
+{
+	streaming
+	voice
+	sound sound/scenaric/church/axis1_jawhol.ogg
+}
+
+churchn2_1
+{
+	streaming
+	voice
+	sound sound/scenaric/church/axis2_done_that.ogg
+}
+
+churchn3_1
+{
+	streaming
+	voice
+	sound sound/scenaric/church/axis3_nothing_human.ogg
+}
+
+churche1_1
+{
+	streaming
+	voice
+	sound sound/scenaric/church/elite1_gawking.ogg
+}
+
+churche1_2
+{
+	streaming
+	voice
+	sound sound/scenaric/church/elite1_convinced.ogg
+}
+
+coffinlid_1
+{
+	streaming
+	voice
+	sound sound/scenaric/church/coffin_lid_1.ogg
+}
+
+church_lightning1
+{
+	streaming
+	sound sound/scenaric/church/lightning1.ogg
+}
+
+church_lightning2
+{
+	streaming
+	sound sound/scenaric/church/lightning2.ogg
+}
+
+church_lightning3
+{
+	streaming
+	sound sound/scenaric/church/lightning3.ogg
+}
+
+church_thunder1
+{
+	streaming
+	sound sound/scenaric/church/thunder1.ogg
+}
+
+church_thunder2
+{
+	streaming
+	sound sound/scenaric/church/thunder2.ogg
+}
+
+church_thunder3
+{
+	streaming
+	sound sound/scenaric/church/thunder3.ogg
+}
+
+church_helga1_1
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_hel_01.ogg
+}
+
+church_helga1_2
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_hel_02.ogg
+}
+
+church_helga1_3
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_hel_03.ogg
+}
+
+church_helga1_4
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_hel_04.ogg
+}
+
+church_helga1_5
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_hel_05.ogg
+}
+
+church_helga1_6
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_hel_06.ogg
+}
+
+church_zemph1_1
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_zem_01.ogg
+}
+
+church_zemph1_2
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_zem_02.ogg
+}
+
+church_zemph1_3
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_zem_03.ogg
+}
+
+church_zemph1_4
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_zem_04.ogg
+}
+
+church_zemph1_5
+{
+	streaming
+	voice
+	sound sound/scenaric/church/cs04_zem_05.ogg
+}
+
+church_kill_him
+{
+	streaming
+	voice
+	sound sound/scenaric/general/misc_kill_him.ogg
+}
+
+church_dispatch
+{
+	streaming
+	sound sound/scenaric/church/dispatch.ogg
+}
+
+church_elite_combat1
+{
+	streaming
+	voice
+	random
+	sound sound/scenaric/general/fem_die.ogg
+	sound sound/scenaric/general/blank.ogg
+	sound sound/scenaric/general/fem_halt.ogg
+	sound sound/scenaric/general/blank.ogg
+	sound sound/scenaric/general/fem_achtung.ogg
+	sound sound/scenaric/general/blank.ogg
+	sound sound/scenaric/general/fem_honda_hock.ogg
+}
+
+church_elite_combat2
+{
+	streaming
+	voice
+	sound sound/scenaric/general/fem_honda_hock.ogg
+	sound sound/scenaric/general/blank.ogg		
+	sound sound/scenaric/general/fem_its_ze_american.ogg
+	sound sound/scenaric/general/blank.ogg
+	sound sound/scenaric/general/fem_take_cover.ogg
+}
+
+church_elite_combat3
+{
+	streaming
+	voice
+	sound sound/scenaric/general/fema_were_under_attack.ogg
+	sound sound/scenaric/general/blank.ogg	
+	sound sound/scenaric/general/fema_cover_me.ogg
+	sound sound/scenaric/general/blank.ogg	
+	sound sound/scenaric/general/fema_take_cover.ogg
+	sound sound/scenaric/general/blank.ogg	
+	sound sound/scenaric/general/fema_you_are_outnumbered.ogg
+}
+
+church_get_ready
+{
+	streaming
+	voice
+	sound sound/scenaric/general/fem_get_ready_he_is_coming.ogg
+}

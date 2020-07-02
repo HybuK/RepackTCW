@@ -1,0 +1,17 @@
+md3_weapon2, "acc/clipboard.md3"
+md3_weapon, "acc/pen.md3"
+
+tag_head,
+tag_footleft,
+tag_legleft,
+tag_footright,
+tag_legright,
+tag_lbelt,
+tag_torso,
+tag_bleft,
+tag_bright,
+l_legs,models/players/drz/drz_xlegs1.tga
+u_body,models/players/drz/drz_xbody1.tga
+u_handrt,models/players/drz/drz_xlegs1.tga
+u_handlft,models/players/drz/drz_xlegs1.tga
+

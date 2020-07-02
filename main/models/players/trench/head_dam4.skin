@@ -1,0 +1,13 @@
+md3_part, "mhead2.md3"
+md3_hat, "acc/t_OrdnungspolizeiCap"
+//md3_hat2 "acc/monocle"
+//md3_hat2 "acc/glasses"
+//md3_hat2 "acc/goggles"
+
+
+tag_head,
+mhead2,models/players/trench/t_headdam4.tga
+h_mouthin,models/players/trench/t_headdam4.tga
+mteethbot2,models/players/trench/t_headdam4.tga
+mteethup2,models/players/trench/t_headdam4.tga
+h_blink,models/players/infantrySS/i_head_blinkVOID.tga

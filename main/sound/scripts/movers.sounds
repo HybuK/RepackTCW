@@ -1,0 +1,583 @@
+// sound scripts for movers (doors/buttons)
+//
+// channels: local, announcer, body, voice, weapon, item, auto (default)
+// toggles: streaming, looping (only works for streaming sounds), global
+
+
+///////////////// Doors
+
+//
+// door type 1
+//
+
+// regular open/close
+
+door1_open {
+	sound sound/movers/doors/door5_open.ogg
+}
+
+door1_endo {
+	sound sound/movers/doors/door5_endo.ogg
+}
+
+door1_close {
+	sound sound/movers/doors/door5_close.ogg
+}
+
+door1_endc {
+	sound sound/movers/doors/door5_endc.ogg
+}
+
+door1_loopo {
+	sound sound/movers/doors/door5_loopo.ogg
+}
+
+door1_loopc {
+	sound sound/movers/doors/door5_loopc.ogg
+}
+
+door1_locked {
+	sound sound/movers/doors/door5_locked.ogg	// referenced in other areas
+}
+
+// quiet open/close
+
+door1_openq {
+	sound sound/movers/doors/door5_openq.ogg
+}
+
+door1_endoq {
+	sound sound/movers/doors/door5_endoq.ogg
+}
+
+door1_closeq {
+	sound sound/movers/doors/door5_closeq.ogg
+}
+
+door1_endcq {
+	sound sound/movers/doors/door5_endcq.ogg
+}
+
+// kicked open
+
+door1_kicked {
+	sound sound/movers/doors/door5_kicked.ogg
+}
+
+door1_kickedend {
+	sound sound/movers/doors/door5_locked.ogg		// shared
+}
+
+//
+// door type 2
+//
+
+door2_open {
+	sound sound/movers/doors/door2_open.ogg
+}
+
+door2_endo {
+	sound sound/movers/doors/door2_locked.ogg			// shared
+}
+
+door2_close {
+	sound sound/movers/doors/door2_close.ogg
+}
+
+door2_endc {
+	sound sound/movers/doors/door2_locked.ogg			// shared
+}
+
+door2_loopo {
+	sound sound/movers/doors/door2_loop.ogg
+}
+
+door2_loopc {
+	sound sound/movers/doors/door2_loop.ogg
+}
+
+door2_locked {
+	sound sound/movers/doors/door2_locked.ogg	// referenced in other areas
+}
+
+door2_openq {
+	sound sound/movers/doors/door2_openq.ogg
+}
+
+door2_endoq {
+	sound sound/movers/doors/door2_endoq.ogg
+}
+
+door2_closeq {
+	sound sound/movers/doors/door2_closeq.ogg
+}
+
+door2_endcq {
+	sound sound/movers/doors/door2_endcq.ogg
+}
+
+door2_kicked {
+	sound sound/movers/doors/door2_kicked.ogg
+}
+
+door2_kickedend {
+	sound sound/movers/doors/door2_kickedend.ogg
+}
+
+
+//
+// door type 3
+//
+
+door3_open {
+	sound sound/movers/doors/door3_open.ogg		// referenced in other areas
+}
+
+door3_endo {
+	sound sound/movers/doors/door3_endo.ogg		// referenced in other areas
+}
+
+door3_close {
+	sound sound/movers/doors/door3_open.ogg			// shared
+}
+
+door3_endc {
+	sound sound/movers/doors/door3_endo.ogg			// shared
+}
+
+door3_loopo {
+	sound sound/movers/doors/door3_loopo.ogg	// referenced in other areas
+}
+
+door3_loopc {
+	sound sound/movers/doors/door3_loopo.ogg		// shared
+}
+
+door3_locked {
+	sound sound/movers/doors/door2_locked.ogg		// shared
+}
+
+door3_openq {
+	sound sound/movers/doors/door3_openq.ogg
+}
+
+door3_endoq {
+	sound sound/movers/doors/door3_endoq.ogg
+}
+
+door3_closeq {
+	sound sound/movers/doors/door3_closeq.ogg
+}
+
+door3_endcq {
+	sound sound/movers/doors/door3_endcq.ogg
+}
+
+door3_kicked {
+	sound sound/movers/doors/door3_kicked.ogg
+}
+
+door3_kickedend {
+	sound sound/movers/doors/door3_kickedend.ogg
+}
+
+
+//
+// door type 4
+//
+
+door4_open {
+	sound sound/movers/doors/door4_open.ogg
+}
+
+door4_endo {
+	sound sound/movers/doors/door4_endo.ogg
+}
+
+door4_close {
+	sound sound/movers/doors/door4_close.ogg
+}
+
+door4_endc {
+	sound sound/movers/doors/door4_endc.ogg
+}
+
+door4_loopo {
+	sound sound/movers/doors/door4_loopo.ogg
+}
+
+door4_loopc {
+	sound sound/movers/doors/door4_loopc.ogg
+}
+
+door4_locked {
+	sound sound/movers/doors/door4_locked.ogg		// referenced in other areas
+}
+
+door4_openq {
+	sound sound/movers/doors/door4_openq.ogg
+}
+
+door4_endoq {
+	sound sound/movers/doors/door4_endoq.ogg
+}
+
+door4_closeq {
+	sound sound/movers/doors/door4_closeq.ogg		// referenced in other areas
+}
+
+door4_endcq {
+	sound sound/movers/doors/door4_endcq.ogg		// referenced in other areas
+}
+
+door4_kicked {
+	sound sound/movers/doors/door2_locked.ogg			// shared
+}
+
+door4_kickedend {
+	sound sound/movers/doors/door4_kickedend.ogg	// referenced in other areas
+}
+
+
+//
+// door type 5
+//
+
+door5_open {
+	sound sound/movers/doors/door5_open.ogg
+}
+
+door5_endo {
+	sound sound/movers/doors/door5_endo.ogg
+}
+
+door5_close {
+	sound sound/movers/doors/door5_close.ogg
+}
+
+door5_endc {
+	sound sound/movers/doors/door5_endc.ogg
+}
+
+door5_loopo {
+	sound sound/movers/doors/door5_loopo.ogg
+}
+
+door5_loopc {
+	sound sound/movers/doors/door5_loopc.ogg
+}
+
+door5_locked {
+	sound sound/movers/doors/door5_locked.ogg	// referenced in other areas
+}
+
+door5_openq {
+	sound sound/movers/doors/door5_openq.ogg
+}
+
+door5_endoq {
+	sound sound/movers/doors/door5_endoq.ogg
+}
+
+door5_closeq {
+	sound sound/movers/doors/door5_closeq.ogg
+}
+
+door5_endcq {
+	sound sound/movers/doors/door5_endcq.ogg
+}
+
+door5_kicked {
+	sound sound/movers/doors/door5_kicked.ogg
+}
+
+door5_kickedend {
+	sound sound/movers/doors/door5_locked.ogg		// shared
+}
+
+
+//
+// door type 6
+//
+
+door6_open {
+	sound sound/movers/doors/door6_open.ogg
+}
+
+door6_endo {
+	sound sound/movers/doors/door4_locked.ogg		// shared
+}
+
+door6_close {
+	sound sound/movers/doors/door6_close.ogg
+}
+
+door6_endc {
+	sound sound/movers/doors/door6_endc.ogg
+}
+
+door6_loopo {
+	sound sound/movers/doors/door6_loopo.ogg
+}
+
+door6_loopc {
+	sound sound/movers/doors/door6_loopc.ogg
+}
+
+door6_locked {
+	sound sound/movers/doors/door6_locked.ogg		
+}
+
+door6_openq {
+	sound sound/movers/doors/door6_openq.ogg
+}
+
+door6_endoq {
+	sound sound/movers/doors/door6_endoq.ogg
+}
+
+door6_closeq {
+	sound sound/movers/doors/door6_closeq.ogg
+}
+
+door6_endcq {
+	sound sound/movers/doors/door6_endcq.ogg
+}
+
+door6_kicked {
+	sound sound/movers/doors/door6_kicked.ogg
+}
+
+door6_kickedend {
+	sound sound/movers/doors/door6_kickedend.ogg
+}
+
+
+//
+// door type 7
+//
+
+door7_open {
+	sound sound/movers/doors/door7_open.ogg
+}
+
+door7_endo {
+	sound sound/movers/doors/door7_endo.ogg
+}
+
+door7_close {
+	sound sound/movers/doors/door4_closeq.ogg		// shared
+}
+
+door7_endc {
+	sound sound/movers/doors/door4_endcq.ogg		// shared
+}
+
+door7_loopo {
+	sound sound/movers/doors/door7_loopo.ogg
+}
+
+door7_loopc {
+	sound sound/movers/doors/door7_loopc.ogg
+}
+
+door7_locked {
+	sound sound/movers/doors/door7_locked.ogg
+}
+
+door7_openq {
+	sound sound/movers/doors/door7_openq.ogg
+}
+
+door7_endoq {
+	sound sound/movers/doors/door7_endoq.ogg
+}
+
+door7_closeq {
+	sound sound/movers/doors/door7_closeq.ogg
+}
+
+door7_endcq {
+	sound sound/movers/doors/door7_endcq.ogg
+}
+
+door7_kicked {
+	sound sound/movers/doors/door7_kicked.ogg
+}
+
+door7_kickedend {
+	sound sound/movers/doors/door7_kickedend.ogg
+}
+
+
+//
+// door type 8
+//
+
+door8_open {
+	sound sound/movers/doors/door8_open.ogg
+}
+
+door8_endo {
+	sound sound/movers/doors/door8_endo.ogg
+}
+
+door8_close {
+	sound sound/movers/doors/door8_close.ogg
+}
+
+door8_endc {
+	sound sound/movers/doors/door8_endc.ogg
+}
+
+door8_loopo {
+	sound sound/movers/doors/door8_loopo.ogg
+}
+
+door8_loopc {
+	sound sound/movers/doors/door8_loopc.ogg
+}
+
+door8_locked {
+	sound sound/movers/doors/door4_locked.ogg		// shared
+}
+
+door8_openq {
+	sound sound/movers/doors/door8_openq.ogg
+}
+
+door8_endoq {
+	sound sound/movers/doors/door8_endoq.ogg
+}
+
+door8_closeq {
+	sound sound/movers/doors/door8_closeq.ogg	// referenced in other areas
+}
+
+door8_endcq {
+	sound sound/movers/doors/door8_closeq.ogg		// shared
+}
+
+door8_kicked {
+	sound sound/movers/doors/door2_locked.ogg		// shared
+}
+
+door8_kickedend {
+	sound sound/movers/doors/door4_kickedend.ogg	// shared
+}
+
+
+//
+// door type 9
+//
+
+door9_open {
+	sound sound/movers/doors/door9_open.ogg
+}
+
+door9_endo {
+	sound sound/movers/doors/door9_endo.ogg
+}
+
+door9_close {
+	sound sound/movers/doors/door9_close.ogg
+}
+
+door9_endc {
+	sound sound/movers/doors/door9_endc.ogg
+}
+
+door9_loopo {
+	sound sound/movers/doors/door9_loopo.ogg
+}
+
+door9_loopc {
+	sound sound/movers/doors/door9_loopc.ogg
+}
+
+door9_locked {
+	sound sound/movers/doors/door4_locked.ogg		// shared
+}
+
+door9_openq {
+	sound sound/movers/doors/door9_openq.ogg
+}
+
+door9_endoq {
+	sound sound/movers/doors/door9_endoq.ogg
+}
+
+door9_closeq {
+	sound sound/movers/doors/door9_closeq.ogg
+}
+
+door9_endcq {
+	sound sound/movers/doors/door9_endcq.ogg
+}
+
+door9_kicked {
+	sound sound/movers/doors/door9_kicked.ogg
+}
+
+door9_kickedend {
+	sound sound/movers/doors/door9_kickedend.ogg
+}
+
+
+//
+// door type 10
+//
+
+door10_open {
+	sound sound/movers/doors/door10_open.ogg	// referenced in other areas
+}
+
+door10_endo {
+	sound sound/movers/doors/door10_endo.ogg
+}
+
+door10_close {
+	sound sound/movers/doors/door10_open.ogg		// shared
+}
+
+door10_endc {
+	sound sound/movers/doors/door10_endc.ogg
+}
+
+door10_loopo {
+	sound sound/movers/doors/door10_loopo.ogg
+}
+
+door10_loopc {
+	sound sound/movers/doors/door10_loopc.ogg
+}
+
+door10_locked {
+	sound sound/movers/doors/door10_locked.ogg
+}
+
+door10_openq {
+	sound sound/movers/doors/door10_openq.ogg
+}
+
+door10_endoq {
+	sound sound/movers/doors/door10_endoq.ogg
+}
+
+door10_closeq {
+	sound sound/movers/doors/door10_closeq.ogg
+}
+
+door10_endcq {
+	sound sound/movers/doors/door10_endcq.ogg
+}
+
+door10_kicked {
+	sound sound/movers/doors/door10_kicked.ogg
+}
+
+door10_kickedend {
+	sound sound/movers/doors/door10_kickedend.ogg
+}
+
+

@@ -1,0 +1,30 @@
+cameraPathDef { 
+	time 15.00000
+	camera_Interpolated {
+		time 15000
+		type 1
+		name position
+		baseVelocity 22.266666
+		startPos ( 2807.000000 3044.000000 666.000000 )
+		endPos ( 2807.000000 3044.000000 1000.000000 )
+	}
+	target_Interpolated {
+		time 15000
+		type 1
+		name 
+		baseVelocity 23.243254
+		startPos ( 2844.000000 3075.000000 666.000000 )
+		endPos ( 2844.000000 2975.000000 1000.000000 )
+	}
+	event {
+		type 4
+		param ""
+		time 0
+	}
+	fov {
+		fov 90.000000
+		startFOV 90.000000
+		endFOV 90.000000
+		time 0
+	}
+}

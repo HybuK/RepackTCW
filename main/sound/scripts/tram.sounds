@@ -1,0 +1,56 @@
+// Tram sounds
+// This file is meant for level defind sounds.
+//
+// channels: local, announcer, body, voice, weapon, item, auto (default)
+// toggles: streaming, looping (only works for streaming sounds), global
+
+// Sounds for Tram
+
+Tram_Station1
+{
+	streaming
+	voice
+	sound sound/scenaric/tram/station_report.ogg
+}
+
+Tram_Station2
+{
+	streaming
+	voice
+	sound sound/scenaric/tram/station_ze_american.ogg
+}
+
+Tram_Station3
+{
+	streaming
+	voice
+	sound sound/scenaric/tram/station_station_out.ogg
+}
+
+Tram_Kesler1
+{
+	streaming
+	voice
+	sound sound/scenaric/tram/kess_under_control.ogg
+}
+
+Tram_Kesler2
+{
+	streaming
+	voice
+	sound sound/scenaric/tram/kess_dead.ogg
+}
+
+Tram_Kesler3
+{
+	streaming
+	voice
+	sound sound/scenaric/tram/kess_dont_shoot.ogg
+}
+
+Tram_Kesler4
+{
+	streaming
+	voice
+	sound sound/scenaric/tram/kess_follow_me.ogg
+}
