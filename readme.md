@@ -15,7 +15,7 @@ RepackTCW
 4) 64х битной версии Linux - wolfsp.x86_64
 
 
-[добавлен релиз с распакованным контентом версии 1.1](https://github.com/HybuK/RepackTCW/tree/release_1.1)
+-==== [добавлен релиз с распакованным контентом версии 1.1](https://github.com/HybuK/RepackTCW/tree/release_1.1) ====-
 
 -Увеличена сложность
 
