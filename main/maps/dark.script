@@ -439,7 +439,7 @@ bridge2
 
 	trigger fall1
 	{
-		playsound sound/scenaric/crypt1/squish.ogg
+		playsound sound/scenaric/crypt1/squish.wav
 		gotomarker b2spot1a 10 wait
 		faceangles -2 0 0 200
 		gotomarker b2spot1 2 wait
